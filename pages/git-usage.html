@@ -41,11 +41,42 @@ Show a concise and colorful log:
 $ git lg
 </code></pre>
 
+Diff last commit:
+<pre><code>$ git config --global alias.dl 'diff --color HEAD~1'
+$ git dl
+</code></pre>
+
+Show number of insertions and deletions of modified files:
+<pre><code>$ git config --global alias.ds 'diff --numstat'
+$ git ds
+</code></pre>
+
 
           <h3>
-<a name="heading2" class="anchor" href="#heading2"><span class="octicon octicon-link"></span></a>Heading 2</h3>
+<a name="workflow" class="anchor" href="#workflow"><span class="octicon octicon-link"></span></a>Git workflows</h3>
 
-<p>Lorem ipsum dolar sit amet</p>
+<p>There are a bunch of ways git can be used when doing feature development on a team
+but the workflow that I've become accustomed to is the <em>rebase workflow</em> which would
+look something like this: </p>
+
+<pre><code>$ git checkout master
+$ git pull
+$ git checkout -b new-feature
+</code></pre>
+
+After creating the branch, do some work and commit:
+<pre><code>$ git commit -m "First commit"
+</code></pre>
+
+Make some more changes and commit again:
+<pre><code>$ git commit -m "Last commit"
+</code></pre>
+
+Interactive rebase (squash) and push:
+<pre><code>$ git rebase -i HEAD~2
+$ git push
+</code></pre>
+
 
         </section>
 
