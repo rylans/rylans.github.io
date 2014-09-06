@@ -352,6 +352,18 @@ footer a:hover {
     width: 94%;
     margin: 0 auto;
   }
+  a.button {
+    padding: 6px 4px 6px 4px;
+    width: 121px;
+  }
+  a.button span {
+    padding-left: 4px;
+    display: block;
+    height: 23px;
+  }
+  #view-on-github span {
+    background: transparent;
+  }
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
@@ -372,6 +384,18 @@ footer a:hover {
   .inner {
     width: 98%;
     margin: 0 auto;
+  }
+  a.button {
+    padding: 6px 4px 6px 4px;
+    width: 121px;
+  }
+  a.button span {
+    padding-left: 4px;
+    display: block;
+    height: 23px;
+  }
+  #view-on-github span {
+    background: transparent;
   }
 }
 
