@@ -61,7 +61,7 @@ but the workflow that I've become accustomed to is the <em>rebase workflow</em> 
 look something like this: </p>
 
 <pre><code>$ git checkout master
-$ git pull
+$ git pull --rebase
 $ git checkout -b new-feature
 </code></pre>
 
@@ -78,6 +78,8 @@ Interactive rebase (squash) and push:
 $ git push
 </code></pre>
 
+<p>When doing this rebase, <code>pick</code> the first commit and then <code>squash</code> the
+other ones. Git will then open up a text editor for you to edit the commit messages.</p> 
 
         </section>
 
