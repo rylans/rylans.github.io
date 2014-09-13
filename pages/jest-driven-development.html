@@ -61,14 +61,63 @@ And then add this to <code>package.json</code>:
   }
 </code></pre>
 
+          <h3>
+<a name="writetest" class="anchor" href="#writetest"><span class="octicon octicon-link"></span></a>Write The Test</h3>
 
+<p>The example code that I'm going to be presenting is basically a small statistics
+library for doing calculations on lists of data.</p>
+
+<p>Write a test for the <code>avg</code> function in <code>__tests__/avg-test.js</code>:</p>
+<pre></code>jest.dontMock('../statistics');
+
+describe('Average', function() {
+ it('four numbers to equal 2.0', function() {
+   var avg = require('../statistics');
+   var list = [1.2, 4.4, 1.1, 1.3];
+  
+   expect(avg(list)).toBeCloseTo(2.0, 12);
+ });
+});
+</code></pre>
+
+<p>Since Jest is configured to automatically mock objects, I need the <code>
+jest.dontMock</code> call in order to prevent my code from getting mocked out.
+This code is mostly self-explanatory but I'll point out that since I'm testing
+floating point numbers, I need to specify the precision which in this case is 
+10<sup>-12</sup>.</p>
+
+          <h3>
+<a name="writecode" class="anchor" href="#writecode"><span class="octicon octicon-link"></span></a>Write The Code</h3>
+
+
+<p>In the parent directory of <code>__tests__</code>, I'll make a file
+called <code>statistics.js</code> and write the following:</p>
+
+<pre><code>function avg(list){
+  if(list.length === 0) throw new Error("List length is zero");
+  var avg = 0.0;
+  for(var i = 0; i < list.length; i++){
+    avg = avg + list[i];
+  }
+  return (avg/list.length);
+}
+
+module.exports = avg;
+</code></pre>
+
+          <h3>
+<a name="runtest" class="anchor" href="#runtest"><span class="octicon octicon-link"></span></a>Run The Test</h3>
+
+<p>Now that the code and the test have been written, invoke the test runner:</p>
+
+<pre><code>$ npm test
+</code></pre>
 
         </section>
 
-<footer>
-<a href="../index.html">&lt; Back</a>
-</footer>
-
+        <footer>
+          <a href="../index.html">&lt; Back</a>
+        </footer>
       </div>
     </div>
   </body>
