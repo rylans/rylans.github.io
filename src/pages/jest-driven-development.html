@@ -95,7 +95,7 @@ called <code>statistics.js</code> and write the following:</p>
 <pre><code>function avg(list){
   if(list.length === 0) throw new Error("List length is zero");
   var avg = 0.0;
-  for(var i = 0; i < list.length; i++){
+  for(var i = 0; i &lt; list.length; i++){
     avg = avg + list[i];
   }
   return (avg/list.length);
