@@ -15,7 +15,9 @@ module.exports = function(grunt) {
 	csslint: {
 	  strict: {
 		options: {
-		  import: 2
+		  import: 2,
+		  ids: false,
+		  "box-model": false
 		},
 		src: ['stylesheets/**/*.css']
 	  }
