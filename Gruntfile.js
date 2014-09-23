@@ -17,7 +17,8 @@ module.exports = function(grunt) {
 		options: {
 		  import: 2,
 		  ids: false,
-		  "box-model": false
+		  "box-model": false,
+		  "font-sizes": false
 		},
 		src: ['stylesheets/**/*.css']
 	  }
