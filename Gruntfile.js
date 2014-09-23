@@ -5,10 +5,10 @@ module.exports = function(grunt) {
 	  my_target: {
 		files: [{
 		  expand: true,
-		  cwd: 'stylesheets/',
+		  cwd: 'src/stylesheets/',
 		  src: ['*.css', '!*.min.css'],
-		  dest: 'release/css/',
-		  ext: '.min.css'
+		  dest: 'stylesheets/',
+		  ext: '.css'
 		}]
 	  }
 	},
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		  "box-model": false,
 		  "font-sizes": false
 		},
-		src: ['stylesheets/**/*.css']
+		src: ['src/stylesheets/**/*.css']
 	  }
 	}
   });
