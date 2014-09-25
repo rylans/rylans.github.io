@@ -1,31 +1,31 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-	cssmin: {
-	  my_target: {
-		files: [{
-		  expand: true,
-		  cwd: 'src/stylesheets/',
-		  src: ['*.css', '!*.min.css'],
-		  dest: 'stylesheets/',
-		  ext: '.css'
-		}]
-	  }
-	},
-	csslint: {
-	  strict: {
-		options: {
-		  import: 2,
-		  ids: false,
-		  "box-model": false,
-		  "font-sizes": false
-		},
-		src: ['src/stylesheets/**/*.css']
-	  }
-	},
-    htmlmin: {                                    
-      dist: {       
-        options: {                                 // Target options
+    cssmin: {
+      my_target: {
+	    files: [{
+	      expand: true,
+	      cwd: 'src/stylesheets/',
+	      src: ['*.css', '!*.min.css'],
+	      dest: 'stylesheets/',
+	      ext: '.css'
+	    }]
+	}
+    },
+    csslint: {
+      strict: {
+	    options: {
+	      import: 2,
+	      ids: false,
+	      "box-model": false,
+	      "font-sizes": false
+	    },
+	    src: ['src/stylesheets/**/*.css']
+      }
+    },
+    htmlmin: {
+      dist: {
+        options: {
           removeComments: true,
           collapseWhitespace: true
         },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           'pages/responsive-design.html': 'src/pages/responsive-design.html'
         }
       }
-	}
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -48,5 +48,4 @@ module.exports = function(grunt) {
   grunt.registerTask('lint', ['csslint']);
 
   grunt.registerTask('default', ['csslint', 'cssmin', 'htmlmin']);
-
 };
