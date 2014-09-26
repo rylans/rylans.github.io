@@ -6,6 +6,12 @@ $ git lg
 $ git dl
 </code></pre>Show number of insertions and deletions of modified files:<pre><code>$ git config --global alias.ds 'diff --numstat'
 $ git ds
+</code></pre><h4>More shortcuts</h4><pre><code>ad = add
+co = checkout
+ca = commit -a --verbose
+bra = branch -a
+today = log --since=midnight --author='username' --oneline
+ls = ls-files
 </code></pre><h3><a name="workflow" class="anchor" href="#workflow"><span class="octicon octicon-link"></span></a>Git workflows</h3><p>There are a bunch of ways git can be used when doing feature development on a team but the workflow that I've become accustomed to is the <em>rebase workflow</em> which would look something like this:</p><pre><code>$ git checkout master
 $ git pull --rebase
 $ git checkout -b new-feature
