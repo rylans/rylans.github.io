@@ -189,19 +189,6 @@ a.button span {
   height: 23px;
 }
 
-#download-zip span {
-  background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
-}
-#download-tar-gz span {
-  background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
-}
-#view-on-github span {
-  background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
-}
-#view-on-github {
-  margin-right: 0;
-}
-
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
@@ -242,10 +229,20 @@ ul, ol, dl {
 
 .social i {
   color: #010101;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
+.social i:hover {
+  color: #d5000d;
+}
+
+
 .hrpng {
-	background: transparent url('../images/hr.png') 50% 0 no-repeat;
+  background: transparent url('../images/hr.png') 50% 0 no-repeat;
 }
 
 hr {
@@ -474,8 +471,6 @@ form {
 }
 
 /* GENERAL ELEMENT TYPE STYLES */
-
-
 
 p {
   font-weight: 300;
