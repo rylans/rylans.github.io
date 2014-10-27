@@ -34,7 +34,8 @@ module.exports = function(grunt) {
 	  '404.html': 'src/404.html',
 	  'pages/git-usage.html': 'src/pages/git-usage.html',
 	  'pages/jest-driven-development.html': 'src/pages/jest-driven-development.html',
-	  'pages/responsive-design.html': 'src/pages/responsive-design.html'
+	  'pages/responsive-design.html': 'src/pages/responsive-design.html',
+	  'pages/python-with-vim.html': 'src/pages/python-with-vim.html'
         }
       }
     }
