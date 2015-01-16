@@ -49,6 +49,41 @@ system and rendering engine. At the time of writing, only the '2d' context is th
 it is also possible to render webGL in the canvas using a different context.
 </p>
 
+<h3>
+  <a name="fingerprint" class="anchor" href="#fingerprint"><span class="octicon octicon-link"></span></a>Fingerprinting</h3>
+
+<p>The theory behind fingerprinting with the canvas is that different systems will render text and graphics differently and therefore produce different output. Mowery and Schacham remark that "rendering a single sentence in a widely
+distributed system font [produces] surprising variation" [1].
+</p>
+
+<p>A canvas fingerprint can be produced as follows:</p>
+  <ul>
+    <li>Create a canvas element</li>
+    <li>Get a 2d context</li>
+    <li>Write text to the context</li>
+    <li>call toDataURL() to get the png data</li>
+    <li>Hash the data</li>
+  </ul>
+  <p>
+  This returns identical results for the same system and gives different values depending on the software, hardware and installed fonts.
+</p>
+
+
+<h3>
+  <a name="blocking" class="anchor" href="#blocking"><span class="octicon octicon-link"></span></a>Blocking this Attack</h3>
+
+<p>This attack can be mitigated by downloading a browser extension that blocks calls toDataURL() but then that would
+give trackers another bit of information about you. Another way of dealing with it is just blocking javascript altogether
+but that seems a little bit excessive.
+</p>
+
+<h3>
+  <a name="canvasprintjs" class="anchor" href="#canvasprintjs"><span class="octicon octicon-link"></span></a>canvasprint.js</h3>
+
+<p>I wrote some example code that exhibits this tracking mechanism: <a href="https://www.github.com/rylans/canvasprintjs/">canvasprint.js</a>
+</p>
+
+
 
 
           <hr class="hrpng">

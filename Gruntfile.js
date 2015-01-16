@@ -35,7 +35,8 @@ module.exports = function(grunt) {
 	  'pages/git-usage.html': 'src/pages/git-usage.html',
 	  'pages/jest-driven-development.html': 'src/pages/jest-driven-development.html',
 	  'pages/responsive-design.html': 'src/pages/responsive-design.html',
-	  'pages/python-with-vim.html': 'src/pages/python-with-vim.html'
+	  'pages/python-with-vim.html': 'src/pages/python-with-vim.html',
+	  'pages/canvas-fingerprinting.html': 'src/pages/canvas-fingerprinting.html'
         }
       }
     }
