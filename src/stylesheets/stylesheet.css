@@ -266,30 +266,6 @@ em {
   font-style: italic;
 }
 
-/**
-table {
-  width: 100%;
-  border: 1px solid #ebebeb;
-  border-spacing: 0;
-  border-collapse: collapse;
-  background-color: transparent;
-}
-
-td, th {
-  padding: 0;
-}
-
-td {
-  text-align: left;
-}
-
-td {
-  border: 1px solid #ebebeb;
-  text-align: center; 
-  font-weight: 300;
-}
-**/
-
 /**Bootstrap table start**/
 table {
   background-color: transparent;
@@ -498,11 +474,13 @@ blockquote {
 }
 
 ul li {
+  font-weight: 300;
   list-style: disc inside;
   padding-left: 20px;
 }
 
 ol li {
+  font-weight: 300;
   list-style: decimal inside;
   padding-left: 3px;
 }

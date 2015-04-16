@@ -33,9 +33,9 @@
           <h3>
 <a name="browser-tracking" class="anchor" href="#browser-tracking"><span class="octicon octicon-link"></span></a>Browser Tracking</h3>
 
-<p>Recent studies have been showing that the web browser can be used to fingerprint internet users [1]. There
-are several fingerprinting mechanisms already in use including: Flash cookies, evercookies and canvas fingerprinting [2]
-as well as some novel methods including using the rendering engine, clock skew and webGL [2]. I'm going to briefly
+<p>Recent studies have been showing that the web browser can be used to fingerprint internet users.<sup>[1]</sup> There
+are several fingerprinting mechanisms already in use including: Flash cookies, evercookies and canvas fingerprinting <sup>[2]</sup>
+as well as some novel methods including using the rendering engine, clock skew and webGL.<sup>[2]</sup> I'm going to briefly
 go over canvas fingerprinting and how to mitigate this attack.
 </p>
 
@@ -43,7 +43,7 @@ go over canvas fingerprinting and how to mitigate this attack.
           <h3>
 <a name="canvas" class="anchor" href="#canvas"><span class="octicon octicon-link"></span></a>Canvas</h3>
 
-<p>The canvas can "be used for rendering graphs, game graphics, art, or other visual images on the fly" [4]. This 
+<p>The canvas can "be used for rendering graphs, game graphics, art, or other visual images on the fly."<sup>[3]</sup> This 
 element is useful for producing visual effects but it also potentially leaks information about the browser, operating
 system and rendering engine. At the time of writing, the '2d' context is the most widely-supported but
 it is also possible to render webGL in the canvas using a different context.
@@ -53,7 +53,7 @@ it is also possible to render webGL in the canvas using a different context.
   <a name="fingerprint" class="anchor" href="#fingerprint"><span class="octicon octicon-link"></span></a>Fingerprinting</h3>
 
 <p>The theory behind fingerprinting with the canvas is that different systems will render text and graphics differently and therefore produce different output. Mowery and Schacham remark that "rendering a single sentence in a widely
-distributed system font [produces] surprising variation" [1].
+distributed system font [produces] surprising variation."<sup>[1]</sup>
 </p>
 
 <p>A canvas fingerprint can be produced as follows:</p>
@@ -79,7 +79,7 @@ but that seems a little bit excessive.
 
 <p>
 There are some browser extensions that block the canvas element. For Firefox there is CanvasBlocker and
-for Chrome there is CanvasFingerprintBlock. Adblock Plus claims to be able to stop canvas tracking [5].
+for Chrome there is CanvasFingerprintBlock. Adblock Plus claims to be able to stop canvas tracking.<sup>[4]</sup>
 </p>
 
 <h3>
@@ -93,7 +93,6 @@ for Chrome there is CanvasFingerprintBlock. Adblock Plus claims to be able to st
           <ol class="refs">
               <li>Mowery, Keaton and Hovav Shacham. "Pixel Perfect: Fingerprinting Canvas in HTML5"</li>
               <li>Acar et al. "The Web Never Forgets: Persistent Tracking Mechanisms in the Wild"</li>
-              <li>Acar et al. "FP Detective. Dusting the Web for Fingerprints"</li>
               <li><a href="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</a></li>
               <li><a href="http://bgr.com/2014/07/23/how-to-disable-canvas-fingerprinting/">http://bgr.com/2014/07/23/how-to-disable-canvas-fingerprinting/</a></li>
           </ol>
