@@ -36,6 +36,7 @@ module.exports = function(grunt) {
 	  'pages/jest-driven-development.html': 'src/pages/jest-driven-development.html',
 	  'pages/responsive-design.html': 'src/pages/responsive-design.html',
 	  'pages/python-with-vim.html': 'src/pages/python-with-vim.html',
+	  'pages/page_template.html': 'src/pages/page_template.html',
 	  'pages/canvas-fingerprinting.html': 'src/pages/canvas-fingerprinting.html'
         }
       }
