@@ -2,7 +2,7 @@
 </code></pre><p>The <code>--save-dev</code> is to make Jest appear in your <code>devDependencies</code>.</p><p>And then add this to <code>package.json</code>:<pre><code>  "scripts": {
     "tests": "jest"
   }
-</code></pre><h3><a name="writetest" class="anchor" href="#writetest"><span class="octicon octicon-link"></span></a>Write The Test</h3><p>The example code that I'm going to be presenting is basically a small statistics library for doing calculations on lists of data.</p><p>Write a test for the <code>avg</code> function in <code>__tests__/avg-test.js</code>:</p><pre>jest.dontMock('../statistics');
+</code></pre><h3><a name="writetest" class="anchor" href="#writetest"><span class="octicon octicon-link"></span></a>Write The Test</h3><p>The example code that I'm going to be presenting is basically a small statistics library for doing calculations on lists of data.</p><p>Write a test for the <code>avg</code> function in <code>__tests__/avg-test.js</code>:</p><pre><code>jest.dontMock('../statistics');
 
 describe('Average', function() {
  it('four numbers to equal 2.0', function() {
@@ -12,7 +12,7 @@ describe('Average', function() {
    expect(avg(list)).toBeCloseTo(2.0, 12);
  });
 });
-</pre><p>Since Jest is configured to automatically mock objects, I need the <code>jest.dontMock</code> call in order to prevent my code from getting mocked out. This code is mostly self-explanatory but I'll point out that since I'm testing floating point numbers, I need to specify the precision which in this case is 10<sup>-12</sup>.</p><h3><a name="writecode" class="anchor" href="#writecode"><span class="octicon octicon-link"></span></a>Write The Code</h3><p>In the parent directory of <code>__tests__</code>, I'll make a file called <code>statistics.js</code> and write the following:</p><pre><code>function avg(list){
+</code></pre><p>Since Jest is configured to automatically mock objects, I need the <code>jest.dontMock</code> call in order to prevent my code from getting mocked out. This code is mostly self-explanatory but I'll point out that since I'm testing floating point numbers, I need to specify the precision which in this case is 10<sup>-12</sup>.</p><h3><a name="writecode" class="anchor" href="#writecode"><span class="octicon octicon-link"></span></a>Write The Code</h3><p>In the parent directory of <code>__tests__</code>, I'll make a file called <code>statistics.js</code> and write the following:</p><pre><code>function avg(list){
   if(list.length === 0) throw new Error("List length is zero");
   var avg = 0.0;
   for(var i = 0; i &lt; list.length; i++){
