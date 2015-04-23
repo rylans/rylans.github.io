@@ -31,18 +31,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-
-/*
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-  */
-
 /* LAYOUT STYLES */
 body {
   font-size: 1em;
