@@ -34,6 +34,7 @@ module.exports = function(grunt) {
 	  'm/index.html': 'src/redirect.html',
 	  'mobile/index.html': 'src/redirect.html',
 	  '404.html': 'src/404.html',
+	  'pages/cars-decision.html': 'src/pages/cars-decision.html',
 	  'pages/git-usage.html': 'src/pages/git-usage.html',
 	  'pages/jest-driven-development.html': 'src/pages/jest-driven-development.html',
 	  'pages/responsive-design.html': 'src/pages/responsive-design.html',
