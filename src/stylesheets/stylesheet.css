@@ -243,6 +243,7 @@ ul, ol, dl {
   -moz-transition: .2s;
   -webkit-transition: .2s;
   transition: .2s;
+  margin-right: 0.3em;
 }
 
 .social i:hover {
